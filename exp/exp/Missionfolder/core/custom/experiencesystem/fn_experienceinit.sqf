@@ -94,6 +94,11 @@ if (life_exp_debug == 1) then {
     diag_log format ["%1 life_exp_perks_choice after swap = ", life_exp_perks_choice];
 };
 
+
+{
+    life_exp_names pushBack (_x select 0);
+} forEach life_exp_perks;
+
 life_exp_perks_temp = nil; // not needed anymore
 
 diag_log format  ["[EXP_system] system loaded in %1", (diag_tickTime - _timeStamp)];
